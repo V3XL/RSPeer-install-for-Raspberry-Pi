@@ -34,7 +34,7 @@ if [ ! -f "/home/pi/check.sh" ]; then #if script doesn't exist
 	touch /home/pi/check.sh
 	echo "if !(ls -A -1 /var/run/screen/S-pi | grep \"^[0-9]*\.loader$\")" >> /home/pi/check.sh
 	echo "then" >> /home/pi/check.sh
-    echo "screen -dmS loader sh -c '/home/pi/.rspeer/node/bin/node /home/pi/.rspeer/loader.js'" >> /home/pi/check.sh
+    echo "screen -dmS loader sh -c 'DISPLAY=10.0: /home/pi/.rspeer/node/bin/node /home/pi/.rspeer/loader.js'" >> /home/pi/check.sh
     echo "fi" >> /home/pi/check.sh
     chmod +x /home/pi/check.sh
     /home/pi/check.sh
