@@ -14,3 +14,4 @@ Firstly, install a fresh image of Raspbian lite and then run the following comma
 After this is done you should see your launcher appear in the "Connected Launchers" section at the following webpage:
 https://app.rspeer.org/#/bot/management
 
+You should now be able connect to the Raspberry Pi via remote desktop connection.
