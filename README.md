@@ -2,7 +2,7 @@
 
 I made this script in order to automate the installation of the RSPeer client for Raspberry Pi.
 
-Firstly, install a fresh image of Raspbian and then run the following commands:
+Firstly, install a fresh image of Raspbian lite and then run the following commands:
 
 <code>git clone https://github.com/V3XL/RSPeer-install-for-Raspberry-Pi.git</code></br>
 <code>cd RSPeer-install-for-Raspberry-Pi</code></br>
