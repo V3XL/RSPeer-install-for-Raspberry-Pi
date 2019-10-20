@@ -33,6 +33,7 @@ wget https://download.rspeer.org/launcher/loader.js
 #-------------------
 if [ ! -f "/home/pi/check.sh" ]; then #if script doesn't exist
 	touch /home/pi/check.sh
+	echo "screen -ls" > /home/pi/check.sh
 	echo "if !(ls -A -1 /var/run/screen/S-pi | grep \"^[0-9]*\.loader$\")" >> /home/pi/check.sh
 	echo "then" >> /home/pi/check.sh
     echo "screen -dmS loader sh -c 'DISPLAY=:10.0 /home/pi/.rspeer/node/bin/node /home/pi/.rspeer/loader.js'" >> /home/pi/check.sh
