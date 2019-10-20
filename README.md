@@ -1,6 +1,6 @@
 # RSPeer-install-for-Raspberry-Pi
 
-Automate the installation of the RSPeer client for Raspberry Pi.
+I made this script in order to automate the installation of the RSPeer client for Raspberry Pi.
 
 Firstly, install a fresh image of Raspbian desktop and then run the following commands:
 
