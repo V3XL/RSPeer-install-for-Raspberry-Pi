@@ -11,3 +11,6 @@ Firstly, install a fresh image of Raspbian desktop and then run the following co
 
 (Replace <b>&lt;key&gt;</b> with your link key, found at https://app.rspeer.org/#/bot/management)
 
+After this is done you should see your launcher appear in the "Connected Launchers" section at the following webpage:
+https://app.rspeer.org/#/bot/management
+
