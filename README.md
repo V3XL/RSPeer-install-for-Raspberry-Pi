@@ -6,7 +6,7 @@ Firstly, install a fresh image of Raspbian desktop and then run the following co
 
 <code>wget https://github</code></br>
 <code>chmod +x rspeer-rpi.sh</code></br>
-<code>#Replace <key> with your link key, found at</code></br>
-<code>#https://app.rspeer.org/#/bot/management</code></br>
-<code>./rspeer-rpi.sh <key></code>
+<code>./rspeer-rpi.sh &lt;key&gt;</code></br>
+
+(Replace &lt;key&gt; with your link key, found at https://app.rspeer.org/#/bot/management)
 
