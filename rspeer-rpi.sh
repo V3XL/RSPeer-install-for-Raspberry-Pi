@@ -20,7 +20,6 @@ mv node-v10.14.2-linux-armv7l /home/pi/.rspeer/node
 
 cd /home/pi/.rspeer
 wget https://download.rspeer.org/launcher/loader.js
-/home/pi/.rspeer/node/bin/node /home/pi/.rspeer/loader.js
 
 #-------------------
 #    create check.sh
