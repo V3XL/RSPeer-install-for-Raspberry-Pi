@@ -15,7 +15,7 @@ sudo rm -r node-v10.14.2-linux-armv7l.tar.xz
 
 mkdir /home/pi/.rspeer
 touch /home/pi/.rspeer/key
-echo $1 >> /home/pi/.rspeer/key
+echo $1 > /home/pi/.rspeer/key
 mv node-v10.14.2-linux-armv7l /home/pi/.rspeer/node
 
 cd /home/pi/.rspeer
