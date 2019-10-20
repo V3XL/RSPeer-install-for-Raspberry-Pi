@@ -31,6 +31,8 @@ if [ ! -f "/home/pi/check.sh" ]; then #if script doesn't exist
 	echo "then" >> /home/pi/check.sh
     echo "screen -dmS loader sh -c '/home/pi/.rspeer/node/bin/node /home/pi/.rspeer/loader.js'" >> /home/pi/check.sh
     echo "fi" >> /home/pi/check.sh
+    chmod +x /home/pi/check.sh
+    /home/pi/check.sh
 fi
 
 #-------------------
