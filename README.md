@@ -4,7 +4,7 @@ Automate the installation of the RSPeer client for Raspberry Pi.
 
 Firstly, install a fresh image of Raspbian desktop and then run the following commands:
 
-<code>wget https://github</code></br>
+<code>wget https://github.com/V3XL/RSPeer-install-for-Raspberry-Pi/blob/master/rspeer-rpi.sh</code></br>
 <code>chmod +x rspeer-rpi.sh</code></br>
 <code>./rspeer-rpi.sh &lt;key&gt;</code></br>
 
