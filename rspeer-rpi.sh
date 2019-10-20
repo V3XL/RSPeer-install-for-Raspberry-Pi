@@ -8,7 +8,7 @@ fi
 
 sudo apt-get update -y
 sudo apt-get install screen -y
-sudo apt-get install oracle-java8-jdk -y
+sudo apt-get install openjdk-11-jre -y
 
 #install a lightweight desktop environement, with XRDP
 sudo apt-get install xfce4 -y
