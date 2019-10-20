@@ -9,6 +9,12 @@ fi
 sudo apt-get update -y
 sudo apt-get install screen -y
 
+#install a lightweight desktop environement, with XRDP
+sudo apt-get install xfce4 -y
+sudo apt-get install xfce4-terminal -y
+sudo apt-get install firefox-esr -y
+sudo apt-get install xrdp -y
+
 wget https://nodejs.org/dist/v10.14.2/node-v10.14.2-linux-armv7l.tar.xz
 tar xf node-v10.14.2-linux-armv7l.tar.xz
 sudo rm -r node-v10.14.2-linux-armv7l.tar.xz
