@@ -9,14 +9,14 @@ fi
 sudo apt-get update -y
 sudo apt-get install screen -y
 
-wget https://nodejs.org/dist/v10.14.2/node-v10.14.2-linux-x64.tar.xz
-tar xf node-v10.14.2-linux-x64.tar.xz
-sudo rm -r node-v10.14.2-linux-x64.tar.xz
+wget https://nodejs.org/dist/v10.14.2/node-v10.14.2-linux-armv7l.tar.xz
+tar xf node-v10.14.2-linux-armv7l.tar.xz
+sudo rm -r node-v10.14.2-linux-armv7l.tar.xz
 
 mkdir /home/pi/.rspeer
 touch /home/pi/.rspeer/key
 echo $1 >> /home/pi/.rspeer/key
-mv node-v10.14.2-linux-x64 /home/pi/.rspeer/node
+mv node-v10.14.2-linux-armv7l /home/pi/.rspeer/node
 
 cd /home/pi/.rspeer
 wget https://download.rspeer.org/launcher/loader.js
