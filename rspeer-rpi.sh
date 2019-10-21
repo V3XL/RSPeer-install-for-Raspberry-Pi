@@ -14,7 +14,12 @@ sudo apt-get install openjdk-11-jre -y
 sudo apt-get install xfce4 -y
 sudo apt-get install xfce4-terminal -y
 sudo apt-get install firefox-esr -y
+sudo apt-get install xvfb -y
 sudo apt-get install xrdp -y
+
+
+sudo apt-get install x11vnc -y
+
 
 wget https://nodejs.org/dist/v10.14.2/node-v10.14.2-linux-armv7l.tar.xz
 tar xf node-v10.14.2-linux-armv7l.tar.xz
