@@ -39,7 +39,7 @@ if [ ! -f "/home/pi/check.sh" ]; then #if script doesn't exist
 	echo "screen -ls" > /home/pi/check.sh	
 	echo "if !(ls -A -1 /var/run/screen/S-pi | grep "^[0-9]*\.xvfb$")" >> /home/pi/check.sh
 	echo "then" >> /home/pi/check.sh
-	echo "screen -dmS xvfb sh -c 'Xvfb :10.0 -screen 0 1024x768x16'" >> /home/pi/check.sh
+	echo "screen -dmS xvfb sh -c 'Xvfb :10.0'" >> /home/pi/check.sh
 	echo "fi" >> /home/pi/check.sh
 	
 	#x11vnc
