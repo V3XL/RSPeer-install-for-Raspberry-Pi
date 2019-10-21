@@ -15,11 +15,8 @@ sudo apt-get install xfce4 -y
 sudo apt-get install xfce4-terminal -y
 sudo apt-get install firefox-esr -y
 sudo apt-get install xvfb -y
-sudo apt-get install xrdp -y
-
-
+#sudo apt-get install xrdp -y
 sudo apt-get install x11vnc -y
-
 
 wget https://nodejs.org/dist/v10.14.2/node-v10.14.2-linux-armv7l.tar.xz
 tar xf node-v10.14.2-linux-armv7l.tar.xz
@@ -38,13 +35,28 @@ wget https://download.rspeer.org/launcher/loader.js
 #-------------------
 if [ ! -f "/home/pi/check.sh" ]; then #if script doesn't exist
 	touch /home/pi/check.sh
-	echo "screen -ls" > /home/pi/check.sh
+	#xvfb
+	echo "screen -ls" > /home/pi/check.sh	
+	echo "if !(ls -A -1 /var/run/screen/S-pi | grep "^[0-9]*\.xvfb$")" >> /home/pi/check.sh
+	echo "then" >> /home/pi/check.sh
+	echo "screen -dmS xvfb sh -c 'Xvfb :10.0'" >> /home/pi/check.sh
+	echo "fi" >> /home/pi/check.sh
+	
+	#x11vnc
+	echo "screen -ls" >> /home/pi/check.sh
+	echo "if !(ls -A -1 /var/run/screen/S-pi | grep "^[0-9]*\.x11vnc$")" >> /home/pi/check.sh
+	echo "then" >> /home/pi/check.sh
+	echo "screen -dmS x11vnc sh -c 'x11vnc -display :10.0'" >> /home/pi/check.sh
+	echo "fi" >> /home/pi/check.sh
+
+	#loader
+	echo "screen -ls" >> /home/pi/check.sh
 	echo "if !(ls -A -1 /var/run/screen/S-pi | grep \"^[0-9]*\.loader$\")" >> /home/pi/check.sh
 	echo "then" >> /home/pi/check.sh
-    echo "screen -dmS loader sh -c 'DISPLAY=:10.0 /home/pi/.rspeer/node/bin/node /home/pi/.rspeer/loader.js'" >> /home/pi/check.sh
-    echo "fi" >> /home/pi/check.sh
-    chmod +x /home/pi/check.sh
-    /home/pi/check.sh
+    	echo "screen -dmS loader sh -c 'DISPLAY=:10.0 /home/pi/.rspeer/node/bin/node /home/pi/.rspeer/loader.js'" >> /home/pi/check.sh
+    	echo "fi" >> /home/pi/check.sh
+    	chmod +x /home/pi/check.sh
+    	/home/pi/check.sh
 fi
 
 #-------------------
