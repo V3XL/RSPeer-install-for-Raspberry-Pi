@@ -10,7 +10,7 @@ sudo apt-get update -y
 sudo apt-get install screen -y
 sudo apt-get install openjdk-11-jre -y
 
-#install a lightweight desktop environement, with XRDP
+#install a desktop environement
 sudo apt-get install xfce4 -y
 sudo apt-get install xfce4-terminal -y
 sudo apt-get install firefox-esr -y
