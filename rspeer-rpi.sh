@@ -50,7 +50,7 @@ if [ ! -f "/home/pi/check.sh" ]; then #if script doesn't exist
 	echo "fi" >> /home/pi/check.sh
 	
 	#xfce4
-	echo "screen -ls" > /home/pi/check.sh	
+	echo "screen -ls" >> /home/pi/check.sh	
 	echo "if !(ls -A -1 /var/run/screen/S-pi | grep "^[0-9]*\.xfce4$")" >> /home/pi/check.sh
 	echo "then" >> /home/pi/check.sh
 	echo "screen -dmS xfce4 sh -c 'DISPLAY=:10.0 startxfce4'" >> /home/pi/check.sh
