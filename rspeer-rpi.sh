@@ -46,7 +46,7 @@ if [ ! -f "/home/pi/check.sh" ]; then #if script doesn't exist
 	echo "screen -ls" >> /home/pi/check.sh
 	echo "if !(ls -A -1 /var/run/screen/S-pi | grep "^[0-9]*\.x11vnc$")" >> /home/pi/check.sh
 	echo "then" >> /home/pi/check.sh
-	echo "screen -dmS x11vnc sh -c 'x11vnc -display :10.0'" >> /home/pi/check.sh
+	echo "screen -dmS x11vnc sh -c 'x11vnc -xkb -noxrecord -forever -noxfixes -noxdamage -display :10.0'" >> /home/pi/check.sh
 	echo "fi" >> /home/pi/check.sh
 
 	#loader
