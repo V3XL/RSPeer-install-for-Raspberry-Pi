@@ -39,7 +39,7 @@ if [ ! -f "/home/pi/check.sh" ]; then #if script doesn't exist
 	echo "screen -ls" > /home/pi/check.sh	
 	echo "if !(ls -A -1 /var/run/screen/S-pi | grep "^[0-9]*\.xvfb$")" >> /home/pi/check.sh
 	echo "then" >> /home/pi/check.sh
-	echo "screen -dmS xvfb sh -c 'Xvfb :10.0'" >> /home/pi/check.sh
+	echo "screen -dmS xvfb sh -c 'Xvfb :10.0 -screen 0 1024x768x16'" >> /home/pi/check.sh
 	echo "fi" >> /home/pi/check.sh
 	
 	#x11vnc
@@ -48,7 +48,14 @@ if [ ! -f "/home/pi/check.sh" ]; then #if script doesn't exist
 	echo "then" >> /home/pi/check.sh
 	echo "screen -dmS x11vnc sh -c 'x11vnc -xkb -noxrecord -forever -noxfixes -noxdamage -display :10.0'" >> /home/pi/check.sh
 	echo "fi" >> /home/pi/check.sh
-
+	
+	#xfce4
+	echo "screen -ls" > /home/pi/check.sh	
+	echo "if !(ls -A -1 /var/run/screen/S-pi | grep "^[0-9]*\.xfce4$")" >> /home/pi/check.sh
+	echo "then" >> /home/pi/check.sh
+	echo "screen -dmS xfce4 sh -c 'DISPLAY=:10.0 startxfce4'" >> /home/pi/check.sh
+	echo "fi" >> /home/pi/check.sh
+		
 	#loader
 	echo "screen -ls" >> /home/pi/check.sh
 	echo "if !(ls -A -1 /var/run/screen/S-pi | grep \"^[0-9]*\.loader$\")" >> /home/pi/check.sh
