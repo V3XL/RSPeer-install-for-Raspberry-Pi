@@ -15,7 +15,7 @@ Firstly, install a fresh image of Raspbian lite and then run the following comma
 After this is done you should see your launcher appear in the "Connected Launchers" section at the following webpage:
 https://app.rspeer.org/#/bot/management
 
-Connect to the RPi via Remote Desktop and upon login you will be greeted with a message box and some options to choose from. Select the "Use default config" option.
+Connect to the RPi via VNC to manage the client.
 
 Original forum post:
 http://forums.rspeer.org/topic/1476/tutorial-setup-running-the-rspeer-launcher-on-a-raspberry-pi
