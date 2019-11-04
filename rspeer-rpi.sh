@@ -57,11 +57,11 @@ if [ ! -f "/home/pi/check.sh" ]; then #if script doesn't exist
 	echo "screen -dmS xfce4 sh -c 'DISPLAY=:10.0 startxfce4'" >> /home/pi/check.sh
 	echo "fi" >> /home/pi/check.sh
 		
-	#loader
+	#launcher
 	echo "screen -ls" >> /home/pi/check.sh
-	echo "if !(ls -A -1 /var/run/screen/S-pi | grep \"^[0-9]*\.loader$\")" >> /home/pi/check.sh
+	echo "if !(ls -A -1 /var/run/screen/S-pi | grep \"^[0-9]*\.launcher$\")" >> /home/pi/check.sh
 	echo "then" >> /home/pi/check.sh
-    	echo "screen -dmS loader sh -c 'DISPLAY=:10.0 /home/pi/rspeer-launcher-arm-linux'" >> /home/pi/check.sh
+    	echo "screen -dmS launcher sh -c 'DISPLAY=:10.0 /home/pi/rspeer-launcher-arm-linux'" >> /home/pi/check.sh
     	echo "fi" >> /home/pi/check.sh
     	chmod +x /home/pi/check.sh
     	/home/pi/check.sh
