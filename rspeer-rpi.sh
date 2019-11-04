@@ -20,7 +20,8 @@ sudo apt-get install x11vnc -y
 
 #now using new launcher
 wget https://rspeer.nyc3.digitaloceanspaces.com/console_launcher/rspeer-launcher-arm-linux
-sudo chmod +x rspeer-launcher-arm-linux
+sudo mv rspeer-launcher-arm-linux /home/pi/
+sudo chmod +x /home/pi/rspeer-launcher-arm-linux
 
 mkdir /home/pi/.rspeer
 touch /home/pi/.rspeer/key
