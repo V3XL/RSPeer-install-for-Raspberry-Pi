@@ -18,9 +18,9 @@ sudo apt-get install xvfb -y
 #sudo apt-get install xrdp -y
 sudo apt-get install x11vnc -y
 
-wget https://nodejs.org/dist/v10.14.2/node-v10.14.2-linux-armv7l.tar.xz
-tar xf node-v10.14.2-linux-armv7l.tar.xz
-sudo rm -r node-v10.14.2-linux-armv7l.tar.xz
+#now using new launcher
+wget https://rspeer.nyc3.digitaloceanspaces.com/console_launcher/rspeer-launcher-arm-linux
+sudo chmod +x rspeer-launcher-arm-linux
 
 mkdir /home/pi/.rspeer
 touch /home/pi/.rspeer/key
@@ -60,7 +60,7 @@ if [ ! -f "/home/pi/check.sh" ]; then #if script doesn't exist
 	echo "screen -ls" >> /home/pi/check.sh
 	echo "if !(ls -A -1 /var/run/screen/S-pi | grep \"^[0-9]*\.loader$\")" >> /home/pi/check.sh
 	echo "then" >> /home/pi/check.sh
-    	echo "screen -dmS loader sh -c 'DISPLAY=:10.0 /home/pi/.rspeer/node/bin/node /home/pi/.rspeer/loader.js'" >> /home/pi/check.sh
+    	echo "screen -dmS loader sh -c 'DISPLAY=:10.0 /home/pi/rspeer-launcher-arm-linux'" >> /home/pi/check.sh
     	echo "fi" >> /home/pi/check.sh
     	chmod +x /home/pi/check.sh
     	/home/pi/check.sh
