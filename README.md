@@ -18,4 +18,4 @@ https://app.rspeer.org/#/bot/management
 Connect to the RPi via VNC to manage the client.
 
 Original forum post:
-http://forums.rspeer.org/topic/1476/tutorial-setup-running-the-rspeer-launcher-on-a-raspberry-pi
+https://discourse.rspeer.org/t/tutorial-setup-running-the-rspeer-launcher-on-a-raspberry-pi/2910
